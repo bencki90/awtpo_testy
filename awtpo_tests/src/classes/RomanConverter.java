@@ -29,6 +29,7 @@ public class RomanConverter {
 				}
 				else if(ROMAN_DIGITS[j].length() == 2 && i < roman.length() - 1 && roman.charAt(i) == ROMAN_DIGITS[j].charAt(0) && roman.charAt(i + 1) == ROMAN_DIGITS[j].charAt(1)){
 					arabic += ARABIC_DIGITS[j];
+					++i;
 				}
 			}
 			
@@ -38,7 +39,7 @@ public class RomanConverter {
 	
 	public static void main(String[] args)
 	{
-		RomanConverter.convert("II");
+		System.out.print(RomanConverter.convert("IV"));
 	}
 
 }
